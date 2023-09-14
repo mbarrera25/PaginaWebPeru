@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavigationComponent } from './main/navigation/navigation.component';
 import { FilosofiaComponent } from './pages/filosofia/filosofia.component';
-import { ComprasComponent } from './pages/compras/compras.component';
-import { ContactoComponent } from './pages/contacto/contacto.component';
-import { HomeComponent } from './pages/home/home.component';
+import { purchasesComponent } from './pages/purchase/purchases.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { landingPageComponent } from './pages/landingPage/landingPage.component';
 
 const routes: Routes = [
- { path: 'home', component: HomeComponent},
+ { path: 'home', component: landingPageComponent},
  { path: 'pages/filosofia', component: FilosofiaComponent},
- { path: 'pages/compras', component: ComprasComponent},
- { path: 'pages/contacto', component: ContactoComponent}
+ { path: 'pages/compras', component: purchasesComponent},
+ { path: 'pages/contacto', component: ContactComponent}
 ];
 
 @NgModule({

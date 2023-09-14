@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './main/navigation/navigation.component';
 import { FooterComponent } from './main/footer/footer.component';
-import { ComprasComponent } from './pages/compras/compras.component';
-import { ContactoComponent } from './pages/contacto/contacto.component';
+import { purchasesComponent } from './pages/purchase/purchases.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { FilosofiaComponent } from './pages/filosofia/filosofia.component';
-import { HomeComponent } from './pages/home/home.component';
+import { landingPageComponent } from './pages/landingPage/landingPage.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +16,9 @@ import { HomeComponent } from './pages/home/home.component';
     NavigationComponent,
     FooterComponent,
     FilosofiaComponent,
-    ComprasComponent,
-    ContactoComponent,
-    HomeComponent
+    purchasesComponent,
+    ContactComponent,
+    landingPageComponent
   ],
   imports: [
     BrowserModule,
