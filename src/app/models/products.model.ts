@@ -13,3 +13,8 @@ export interface iCategory {
 name: string
 description: string
 }
+
+export interface iImage{
+  src:string,
+  permalink: string
+}

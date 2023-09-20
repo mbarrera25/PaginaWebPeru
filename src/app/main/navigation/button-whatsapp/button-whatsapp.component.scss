@@ -1,0 +1,20 @@
+/* Estilos CSS personalizados */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 18px;
+  left: 20px;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.whatsapp-link img {
+  width: 60px; /* Personaliza el tamaño del icono */
+  height: 60px;
+  border-radius: 50%; /* Hace que el icono sea circular */
+  background-color: #25d366; /* Color de fondo de WhatsApp */
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Agrega sombra al botón */
+}
+
+.whatsapp-link img:hover {
+  transform: scale(1.1); /* Escala el icono al pasar el cursor */
+}

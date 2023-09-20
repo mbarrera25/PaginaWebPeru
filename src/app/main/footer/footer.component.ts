@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { iImage } from 'src/app/models/products.model';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+  imageRRSS: iImage[] = [
+    {
+      src: '../../../assets/images/Free Facebook.png',
+      permalink: ''
+    },
+    {
+      src: '../../../assets/images/instragram.png',
+      permalink: ''
+    }
+  ]
 }

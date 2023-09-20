@@ -1,0 +1,29 @@
+.cont-hover{
+  position: relative; /* Para establecer un contexto de apilamiento */
+  overflow: hidden; /* Para ocultar cualquier desbordamiento */
+}
+.cont-hover img{
+  transition: 0.3s ease; /* Transición suave para el efecto */
+}
+.cont-hover:hover .overlay {
+  opacity: 0.5; /* Reducción de la opacidad al colocar el cursor sobre la imagen */
+}
+.overlay {
+  position: absolute; /* Posición absoluta en relación con el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Inicialmente oculta la superposición */
+  transition: 0.3s ease; /* Transición suave para el efecto */
+}
+.rrss{
+  width: 20%;
+}
+.iconf{
+  width: 20%;
+}
+.iconi{
+  width: 20%;
+}
+
