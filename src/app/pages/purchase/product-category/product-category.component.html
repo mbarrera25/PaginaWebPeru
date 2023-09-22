@@ -1,47 +1,51 @@
+<!----------------------------CATEGORIAS---------------------------------->
+
 <div class="container-fluid">
   <div class="row justify-content-center">
     <ng-container *ngFor="let category of products_category">
       <div class="col-md-3">
-        <div class="image-container">
-          <img
-            [src]="category.src"
-            alt="Imagen"
-            class="img-fluid w-100"
-          />
-          <div class="overlay-text justify-content-center">{{category.title}}</div>
-        </div>
+        <a [routerLink]="['/pages/compras', category.id]">
+          <div class="image-container">
+            <img [src]="category.src" alt="Imagen" class="img-fluid w-100" />
+            <div class="overlay-text justify-content-center">
+              {{ category.title }}
+            </div>
+          </div>
+        </a>
       </div>
     </ng-container>
   </div>
 </div>
-
+<!----------------------------DESTACADOS---------------------------------->
 <div class="container">
   <h1 class="text-center">Destacados</h1>
   <div class="row">
     <div class="col-md-2" *ngFor="let product of products_outstanding">
-      <div class="card border-light product-card product-image">
-        <img class="card-img-top w-100" [src]="product.src" alt="Title" />
-        <div class="overlay">
-          <p>Ver Producto</p>
+      <a [routerLink]="['/pages/compras/productos/detalle', product.id]">
+        <div class="card border-light product-card product-image">
+          <img class="card-img-top w-100" [src]="product.src" alt="Title" />
+          <div class="overlay">
+            <p>Ver Producto</p>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <ng-container
+              *ngIf="product.offert; then offertPrice; else regularPrice"
+            ></ng-container>
+
+            <ng-template #offertPrice>
+              <p class="card-text text-danger">
+                Antes:<s>{{ product.price }}</s>
+              </p>
+              <h4>{{ product.price_ofert }}</h4>
+            </ng-template>
+
+            <ng-template #regularPrice>
+              <h4>{{ product.price }}</h4>
+            </ng-template>
+          </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">{{ product.title }}</h5>
-          <ng-container
-            *ngIf="product.offert; then offertPrice; else regularPrice"
-          ></ng-container>
-
-          <ng-template #offertPrice>
-            <p class="card-text text-danger">
-              Antes:<s>{{ product.price }}</s>
-            </p> <h4>{{ product.price_ofert }}</h4>
-
-          </ng-template>
-
-          <ng-template #regularPrice>
-            <h4> {{ product.price }}</h4>
-          </ng-template>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
