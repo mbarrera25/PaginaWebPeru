@@ -3,9 +3,10 @@ export interface iProduct {
     description: string
     price: string
     category:iCategory
-    price_ofert: string
-    image: string
-    offers: Boolean
+    price_ofert: string /**precio oferta */
+    image: string[]
+    offers: Boolean /** oferta */
+    outstanding: Boolean /** destacado */
 
 }
 
