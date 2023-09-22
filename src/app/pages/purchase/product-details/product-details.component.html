@@ -1,1 +1,32 @@
-<p>product-details works!</p>
+<div class="container">
+  <div class="row">
+    <ng-container *ngIf="purchaseService.productDetail | async as product">
+      <div class="col-md-6">
+        <!-- Imagen del producto -->
+
+        <img
+          src="{{ product.imageUrl }}"
+          alt="{{ product.name }}"
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-md-6">
+        <!-- Detalles del producto -->
+        <h2>{{ product.description }}</h2>
+        <p class="text-muted">Precio: {{ product.price | currency }}</p>
+
+        <!-- Características del producto -->
+        <h3>Características:</h3>
+        <ul>
+         <!-- <li>{{ product.feature1 }}</li>
+          <li>{{ product.feature2 }}</li>
+          <li>{{ product.feature3 }}</li> -->
+          <!-- Agrega más características según sea necesario -->
+        </ul>
+
+        <!-- Botón de compra -->
+        <button class="btn btn-primary">Comprar</button>
+      </div>
+    </ng-container>
+  </div>
+</div>

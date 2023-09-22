@@ -2,12 +2,13 @@ export interface iProduct {
     id:string
     name: string
     description: string
-    price: string
+    price: number
     category:iCategory
     price_ofert: string /**precio oferta */
     imageUrl: string
     offers: Boolean /** oferta */
     outstanding: Boolean /** destacado */
+   // stock: number
 
 }
 
